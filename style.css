@@ -29,7 +29,6 @@ div img {
     margin: auto;
     width: 100%;
     min-width: 320px;
-    padding: 10px 15px;
 }
 
 header {
@@ -43,13 +42,20 @@ header {
 header .list-items {
     display: flex;
     width: 100%;
-    max-width: 260px;
+    max-width: 300px;
     justify-content: space-between;
     align-items: center;
 }
 
 .list-items li a {
-    color: #fff;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: #F28749;
+    color: rgb(255, 255, 255);
+}
+
+.list-items a:hover {
+    background-color:#F29544;
 }
 
 header .menu {
@@ -59,7 +65,7 @@ header .menu {
 .apresentacao {
     height: 100vh;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-around; 
 }
 
 .apresentacao .texto-apresentacao {
@@ -86,10 +92,14 @@ header .menu {
     margin: 15px 0px;
 }
 
+.btn:hover {
+    background-color: #80A6F2;
+}
+
 #quem-somos {
-    flex-direction: row-reverse;
+    height: 100vh;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-around; 
 }
 
 #quem-somos h2 {
@@ -251,18 +261,73 @@ footer .footer {
     color: #fff;
 }
 
+footer .footer a {
+    text-decoration: underline;
+    color: #F28749;
+}
+
+footer .footer a:hover {
+    text-decoration: underline;
+    color: #80A6F2;
+}
+
 /* mobile */
 
-@media (max-width: 992px)  {
+@media (max-width: 992px) {
+   
     .flex-container {
         flex-direction: column;
     }
 
     .apresentacao {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .apresentacao .texto-apresentacao {
         width: 100%;
+    }
+
+    #quem-somos {
+        flex-direction: column;
+    }
+
+    #quem-somos img {
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .list-servicos {
+        flex-direction: column;
+    }
+
+    .item-servico {
+        margin: 5px;
+    }
+
+    .item-servico img {
+        width: 40%;
+        margin: auto;
+    }
+
+    .list-planos {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .list-planos .item-plano {
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .item-servico a {
+        margin: auto;
+    }
+
+    .footer {
+        padding: 10px;
+        align-items: center;
     }
 }
