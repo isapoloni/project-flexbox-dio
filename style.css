@@ -25,7 +25,7 @@ div img {
 
 .flex-container {
     display: flex;
-    max-width: 992px;
+    max-width: 1000px;
     margin: auto;
     width: 100%;
     min-width: 320px;
@@ -33,10 +33,11 @@ div img {
 
 header {
     background-color: #122A57;
-    height:100px;
+    height: 150px;
     display: flex;
     align-items: center;
     color: #fff;
+    width: 100%;
 }
 
 header .list-items {
@@ -274,9 +275,18 @@ footer .footer a:hover {
 /* mobile */
 
 @media (max-width: 992px) {
-   
+    
     .flex-container {
         flex-direction: column;
+    }
+
+    #titulo {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .list-items {
+        margin: auto;
     }
 
     .apresentacao {
